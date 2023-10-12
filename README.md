@@ -13,4 +13,4 @@ The study acknowledges limitations, including the relatively small size of the e
 
 ## Related Research
 
-- [Link to the Research Paper]([https://example.com/paper.pdf](https://www.sciencedirect.com/science/article/abs/pii/S000293942300082X)https://www.sciencedirect.com/science/article/abs/pii/S000293942300082X)
+- [Link to the Research Paper]([https://example.com/paper.pdf](https://www.sciencedirect.com/science/article/abs/pii/S000293942300082X)
