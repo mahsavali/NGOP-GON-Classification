@@ -10,3 +10,7 @@ In the comparison with previous work, this research used a modified U-net model 
 
 ## Conclusion
 The study acknowledges limitations, including the relatively small size of the external dataset and the fact that the glaucoma specialist differentiated only between GON and NGON in external data. Nonetheless, the deep learning model outperformed the specialist, indicating its potential in assisting ophthalmologists, glaucoma specialists, and neuro-ophthalmologists in accurately distinguishing GON from NGON for appropriate management.
+
+## Related Research
+
+- [Link to the Research Paper]([https://example.com/paper.pdf](https://www.sciencedirect.com/science/article/abs/pii/S000293942300082X)https://www.sciencedirect.com/science/article/abs/pii/S000293942300082X)
