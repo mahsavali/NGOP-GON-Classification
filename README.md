@@ -1,62 +1,110 @@
-# 👁️ NGON vs. GON Classification & Optic Disk Segmentation
+# 👁️ NGON vs. GON Classification & Optic Disc Segmentation  
+### Deep Learning Framework for Automated Ophthalmic Diagnosis
 
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![TensorFlow 2.x](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)](https://tensorflow.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)  
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)](https://tensorflow.org/)  
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)  
+[![Status](https://img.shields.io/badge/Status-Research%20Ready-success.svg)]()  
+[![Domain](https://img.shields.io/badge/Domain-Medical%20AI-critical)]()  
 
-Distinguishing Non-Glaucomatous Optic Neuropathy (**NGON**) from Glaucomatous Optic Neuropathy (**GON**) based on optic disc appearance can be challenging, as both can have similar characteristics. This repository provides a deep-learning framework to automate this differentiation with high precision.
+---
 
-## 🚀 Research Summary
-The goal of this research was to evaluate a deep-learning system's ability to distinguish between GON and NGON using fundus images. 
-* **Model:** DenseNet121
-* **Training Performance:** 95.36% Sensitivity and 97.63% Specificity.
-* **External Testing:** Overall precision of 86.07%, indicating high generalizability.
-* **Clinical Impact:** The deep learning method showed significantly better sensitivity (85.53%) compared to glaucoma specialists.
+## 📌 Abstract
 
-## 🔬 Methodology
-Our framework employs a two-stage pipeline:
-1.  **Segmentation (OD-SEG):** Using a modified **U-Net** model for Region of Interest (ROI) and optic disc segmentation.
-2.  **Classification:** Utilizing **DenseNet121** for its efficient feature transfer via dense connections, allowing the model to capture fine-grained pathological details.
+Differentiating **Glaucomatous Optic Neuropathy (GON)** from **Non-Glaucomatous Optic Neuropathy (NGON)** remains a critical and challenging task in clinical ophthalmology due to overlapping visual biomarkers in fundus imaging.
 
-![Figure1300](https://user-images.githubusercontent.com/119206364/205449245-f4072bac-d2fa-4dc0-a020-698f8b68adac.jpg)
-*Figure Overview: (A) Automated classification pipeline, (B) Healthy/GON/NGON examples, (C) Framework steps, (D) OD-SEG and Transfer Learning architecture.*
+This repository introduces a **robust deep learning pipeline** that integrates **optic disc segmentation** and **disease classification** to achieve high diagnostic accuracy and strong generalization across datasets.
 
-## 📂 Project Structure
-* `OpticDiskSegmentation.ipynb`: Training the U-Net for OD segmentation.
-* `predicfundusseg.py`: Inference script for segmenting the Optic Disk from fundus images.
-* `K-Fold.ipynb`: Robust training/evaluation using K-Fold cross-validation.
-* `DataSplit.ipynb`: Data orchestration and train/test partitioning.
-* `Metrics.py`: Custom module for medical metrics (Specificity, Sensitivity, F1-Score).
+---
 
-## 🚀 Getting Started
+## 🎯 Key Contributions
 
-### Installation
-```bash
+- ✅ End-to-end **two-stage deep learning pipeline**
+- 🧠 Integration of **U-Net (segmentation)** and **DenseNet121 (classification)**
+- 📈 Clinically relevant evaluation using **Sensitivity & Specificity**
+- 🌍 Demonstrated **generalization on external datasets**
+- 🏥 Performance surpassing human glaucoma specialists in sensitivity
+
+---
+
+## 📊 Performance Summary
+
+| Metric                  | Value        |
+|------------------------|-------------|
+| **Sensitivity (Train)** | 95.36%      |
+| **Specificity (Train)** | 97.63%      |
+| **External Precision**  | 86.07%      |
+| **Clinical Sensitivity**| 85.53% (↑ vs Specialists) |
+
+---
+
+## 🧠 Methodology
+
+### 🔹 Stage 1: Optic Disc Segmentation (OD-SEG)
+- Architecture: **Modified U-Net**
+- Purpose: Extract **Region of Interest (ROI)**  
+- Output: Precise optic disc mask for downstream classification  
+
+### 🔹 Stage 2: Classification
+- Architecture: **DenseNet121**
+- Key Advantage:  
+  - Efficient **feature reuse via dense connections**
+  - Improved learning of **fine-grained pathological patterns**
+
+---
+
+## 🖼️ System Pipeline
+
+![Framework](https://user-images.githubusercontent.com/119206364/205449245-f4072bac-d2fa-4dc0-a020-698f8b68adac.jpg)
+
+---
+
+## 🏗️ Project Architecture
+
+```
+.
+├── OpticDiskSegmentation.ipynb
+├── predicfundusseg.py
+├── K-Fold.ipynb
+├── DataSplit.ipynb
+├── Metrics.py
+```
+
+---
+
+## ⚙️ Installation
+
+```
 pip install tensorflow opencv-python matplotlib scikit-learn scikit-image tqdm
+```
 
+---
 
+## 🚀 Usage
 
-## 💻Usage
-To predict the segmentation mask for an image:
-```bash
-Python
+```
 python predicfundusseg.py
 ```
-📝Citation
-If you use this code or research in your work, please cite it as follows:
 
-Code snippet
+---
+
+## 📚 Citation
+
+```
 @article{vali2023differentiating,
   title={Differentiating glaucomatous optic neuropathy from non-glaucomatous optic neuropathies using deep learning algorithms},
-  author={Vali, Mahsa and Mohammadi, Massood and Zarei, Nasim and Samadi, Melika and Atapour-Abarghouei, Amir and others},
-  journal={American journal of ophthalmology},
-  volume={252},
-  pages={1--8},
-  year={2023},
-  publisher={Elsevier}
+  author={Vali, Mahsa and others},
+  journal={American Journal of Ophthalmology},
+  year={2023}
 }
-⭐ Show some love!
-Is this repo helping you save the world's eyesight? Or did it just save you from a coding headache? 🤕
+```
+
+---
+
+## 📜 License
+
+MIT License
+
 
 Either way, if you found this useful, hit that Star button! It’s free, it makes the AI happy, and it's 100% more effective than a "get well soon" card for your code. 🌟🚀
 
