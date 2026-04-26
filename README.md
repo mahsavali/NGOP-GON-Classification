@@ -42,13 +42,13 @@ To predict the segmentation mask for an image:
 Python
 python predicfundusseg.py
 ```
-##📝 Citation
+📝Citation
 If you use this code or research in your work, please cite it as follows:
 
 Code snippet
 @article{vali2023differentiating,
   title={Differentiating glaucomatous optic neuropathy from non-glaucomatous optic neuropathies using deep learning algorithms},
-  author={Vali, Mahsa and Mohammadi, Massood and Zarei, Nasim and Samadi, Melika and Atapour-Abarghouei, Amir and Supakontanasan, Wasu and Suwan, Yanin and Subramanian, Prem S and Miller, Neil R and Kafieh, Rahele and others},
+  author={Vali, Mahsa and Mohammadi, Massood and Zarei, Nasim and Samadi, Melika and Atapour-Abarghouei, Amir and others},
   journal={American journal of ophthalmology},
   volume={252},
   pages={1--8},
