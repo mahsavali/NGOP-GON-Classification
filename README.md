@@ -17,13 +17,29 @@ This repository introduces a **robust deep learning pipeline** that integrates *
 
 ---
 
+## 🧪 Technical Summary
+
+This project is based on a deep learning framework designed to differentiate 
+Glaucomatous Optic Neuropathy (GON) from Non-Glaucomatous Optic Neuropathy (NGON) 
+using color fundus images.
+
+The model was trained on 2,183 labeled fundus images and evaluated on multiple 
+external datasets to ensure generalizability. The pipeline incorporates optic 
+disc segmentation followed by transfer learning-based classification.
+
+The best-performing model (DenseNet121) achieved high diagnostic performance, 
+with strong sensitivity and specificity, and demonstrated superior sensitivity 
+compared to glaucoma specialists in external validation.
+
+---
+
 ## 🎯 Key Contributions
 
-- ✅ End-to-end **two-stage deep learning pipeline**
-- 🧠 Integration of **U-Net (segmentation)** and **DenseNet121 (classification)**
-- 📈 Clinically relevant evaluation using **Sensitivity & Specificity**
-- 🌍 Demonstrated **generalization on external datasets**
-- 🏥 Performance surpassing human glaucoma specialists in sensitivity
+- End-to-end two-stage deep learning pipeline  
+- Integration of U-Net (segmentation) and DenseNet121 (classification)  
+- Clinically relevant evaluation (Sensitivity, Specificity)  
+- Strong generalization on external datasets  
+- Performance surpassing glaucoma specialists in sensitivity  
 
 ---
 
@@ -31,35 +47,32 @@ This repository introduces a **robust deep learning pipeline** that integrates *
 
 | Metric                  | Value        |
 |------------------------|-------------|
-| **Sensitivity (Train)** | 95.36%      |
-| **Specificity (Train)** | 97.63%      |
-| **External Precision**  | 86.07%      |
-| **Clinical Sensitivity**| 85.53% (↑ vs Specialists) |
+| Sensitivity (Train)    | 95.36%      |
+| Specificity (Train)    | 97.63%      |
+| External Precision     | 86.07%      |
+| Clinical Sensitivity   | 85.53%      |
 
 ---
 
 ## 🧠 Methodology
 
-### 🔹 Stage 1: Optic Disc Segmentation (OD-SEG)
-- Architecture: **Modified U-Net**
-- Purpose: Extract **Region of Interest (ROI)**  
-- Output: Precise optic disc mask for downstream classification  
+### Stage 1: Optic Disc Segmentation (OD-SEG)
+- Modified U-Net  
+- ROI extraction  
 
-### 🔹 Stage 2: Classification
-- Architecture: **DenseNet121**
-- Key Advantage:  
-  - Efficient **feature reuse via dense connections**
-  - Improved learning of **fine-grained pathological patterns**
+### Stage 2: Classification
+- DenseNet121  
+- Dense feature reuse for fine-grained learning  
 
 ---
 
-## 🖼️ System Pipeline
+## 🖼️ Pipeline
 
 ![Framework](https://user-images.githubusercontent.com/119206364/205449245-f4072bac-d2fa-4dc0-a020-698f8b68adac.jpg)
 
 ---
 
-## 🏗️ Project Architecture
+## 🏗️ Project Structure
 
 ```
 .
@@ -104,8 +117,3 @@ python predicfundusseg.py
 ## 📜 License
 
 MIT License
-
-
-Either way, if you found this useful, hit that Star button! It’s free, it makes the AI happy, and it's 100% more effective than a "get well soon" card for your code. 🌟🚀
-
-Developed with ❤️ for Medical AI Advancement.
