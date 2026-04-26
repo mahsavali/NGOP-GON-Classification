@@ -33,15 +33,16 @@ Our framework employs a two-stage pipeline:
 ### Installation
 ```bash
 pip install tensorflow opencv-python matplotlib scikit-learn scikit-image tqdm
+```
 
 
-
-Usage
+## 💻Usage
 To predict the segmentation mask for an image:
-
+```bash
 Python
 python predicfundusseg.py
-📝 Citation
+```
+##📝 Citation
 If you use this code or research in your work, please cite it as follows:
 
 Code snippet
