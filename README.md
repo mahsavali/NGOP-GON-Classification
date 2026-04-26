@@ -33,7 +33,7 @@ Our framework employs a two-stage pipeline:
 ### Installation
 ```bash
 pip install tensorflow opencv-python matplotlib scikit-learn scikit-image tqdm
-```
+
 
 
 ## 💻Usage
